@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h1>PROJECT Form</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <!-- <input type="text" value="{{article.title}}" name="title"><br>
+    
+    <input type="textarea" value="{{article.content}}" name="content"><br> -->
+    
+    
+    <input type="submit">
+</form>
+{% endblock %}

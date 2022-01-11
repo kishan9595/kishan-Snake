@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<h1 style="text-align:center;">Multiple Blog</h1>
+
+<a href="{% url 'login' %}">Login</a>
+<table style="text-align:center;">
+    <tr >
+        <th>Article</th>
+        <th>Content</th>
+    </tr>
+    
+<!-- update-article/{{article.id}} -->
+{% for article in articles %}
+<tr>
+<td>{{article.title}}</td>
+<td>{{article.content}}</td>
+<td><a href="{% url 'update-article' article.id %}">Update</a></td>
+<td><a href="{% url 'create-article' %}"> Add </a></td>
+<td><a href="{% url 'delete-article' article.id %}"> Delete </a></td>
+
+</tr>
+{% endfor %}
+</table>
+
+{% endblock content %}
