@@ -9,6 +9,8 @@
     <tr >
         <th>Article</th>
         <th>Content</th>
+        <th>Dates</th>
+        <th>Slug</th>
     </tr>
     
 <!-- update-article/{{article.id}} -->
@@ -16,6 +18,8 @@
 <tr>
 <td>{{article.title}}</td>
 <td>{{article.content}}</td>
+<td>{{article.created}}</td>
+<td>{{article.slug}}</td>
 <td><a href="{% url 'update-article' article.id %}">Update</a></td>
 <td><a href="{% url 'create-article' %}"> Add </a></td>
 <td><a href="{% url 'delete-article' article.id %}"> Delete </a></td>
